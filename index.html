@@ -1,225 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my page</title>
-    <link  rel = "shortcut icon" href = "https://tse1.mm.bing.net/th/id/OIP.g1nsOD9uvn7iaN-Og86tvgHaHp?pid=Api&P=0&h=180" type = "image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pokemon Landing Page</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> Heading 1 </h1>
-        <p>
-            Lorem <b>ipsum</b> <strong>dolor</strong> sit amet consectetur adipisicing elit. Dolore ducimus ipsa corporis nostrum, tenetur ipsum iste, velit omnis, amet reiciendis doloribus molestias ut totam laboriosam autem beatae! Laudantium, quaerat ea.
-        </p>
-    <a href = "https://google.com"> go to Google</a>
-    <a href = "tel:9390512188">9390512188</a>
-    <img 
-    width = "100"
-    src = "https://images.unsplash.com/photo-1626163450208-0fb18eb43b99?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Snow Covered Mountain">
-    <audio src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls></audio>
-    
-    <ol>
-        <li>item 1</li>
-        <li>item 2</li> 
-    </ol>
-    <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-    </ul>
-    <dl>
-        <dt> HTML </dt>
-        <dd> HyperText Markup Language </dd>
-        <dt> CSS </dt>
-        <dd> Cascading Style Sheets </dd>
 
-    </dl>
+  <!-- white outer container -->
+  <div class="main-container">
 
+    <!-- actual landing page -->
+    <div class="container">
 
-    <table border = "2">
-        <caption> Fruits </caption>
-        <tr>
-            <th> Name </th>
-            <th> Quantity </th>
-            <th> Price </th>
-        </tr>
-      <body>
-        <tr>
-            <td> Apple </td>
-            <td> 1 kg </td>
-            <td> 100 Rs </td>
-        </tr>
-        <tr>
-            <td> Banana </td>
-            <td> 1 dozen </td>
-            <td> 50 Rs </td>
-        </tr>  
-        <tfoot>
-            <tr>
-                <th colspan="2"> Total </th>
-                <td> 150 </td>
-            </tr>
-        </tfoot>
-                <colgroup>
-            <col style="background-color: lightblue;">
-            <col style="background-color: antiquewhite;">
-            <col style="background-color: lightgray;">
-        </colgroup>
-        </table>
-        <br />
-        <br />
+      <!-- LEFT SIDE -->
+      <div class="left">
 
-        <form>
-            <label for = "name"> Name </label>
-            <input id = "name" type = "text" placeholder="Enter your name">
-            <label for = "language"> Language </label>
-            <select id = "language">
-                <optgroup label= "frontend">
-                <option>HTML</option>
-                <option>CSS</option>
-                <option>JavaScript</option>
-                </optgroup>
-                <optgroup label= "backend">
-                <option>NodeJS</option> 
-                <option>PHP</option>
-                <option>Python</option>
-                </optgroup> 
-            </select>
-            <br />
-            <br />
-            
-            <label for = "Review"> Review </label>
-            <textarea id = "Review" placeholder="Enter your review" rows = "4"></textarea>
-            <button type = "submit"> Submit </button>
-            <br />
-            <br />
+        <!-- pokemon logo -->
+        <img src="./Pokemon_logo.png" class="logo">
 
-            <fieldset>
-                <legend> Personal Information </legend>
-                <label for = "name"> Name </label>
-                <input id = "name" type = "text" placeholder="Enter your name">
-                <br />
-                <br />
-                <label for = "email"> Email </label>
-                <input id = "email" type = "email" placeholder="Enter your email">
-                <br />
-                <br />
-                <label for = "password"> Password </label>
-                <input id = "password" type = "password" placeholder="Enter your password">
-            </fieldset>
+        <!-- text -->
+        <div class="text-content">
 
-            <a target = "_blank" href = "/momdad1.jpg"> download </a>
+          <p class="small-title">POKEMON GEN I</p>
 
-            <details>
-                <summary> Click to see more details </summary>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel ullam, nulla ipsam atque dolores sit praesentium error cum architecto debitis labore dolore perspiciatis minus fugiat nihil, quibusdam, est odit quaerat qui libero. Delectus deserunt omnis ullam exercitationem eum beatae.</p>
-            </details>
-            <hr>
+          <h1 class="main-title">Pikachu</h1>
 
-            <img height = "100" src = "./momdad1.jpg" alt="Mom and Dad">
-            <video
-             autoplay loop muted controls width = "320" height = "240" src = "./myfun.mp4"></video>
-            <br />
-            <br />
-            <audio controls src = "./foraudio.mp3" controls></audio><br>
+          <p class="description">
+            Pikachu is an Electric-type Pokémon introduced
+            in Generation I. Pikachu are small, chubby,
+            and incredibly cute mouse-like Pokémon.
+            They are almost completely covered by
+            yellow fur.
+          </p>
 
-            <form>
-                <label for = "name"> Name </label>
-            
-            
-                <input id = "name" type = "text" placeholder = "Enter your name"><br>
-                <input type = "password" placeholder = "Enter your password"><br>
-                <input type = "email" placeholder = "Enter your email"><br>
-                <input type = "date"><br>
-                <input type = "checkbox" id = "terms">
-                <label for = "terms"> I accept the terms and conditions </label><br>
-                <input type = "radio" name = "gender">male
-                <input type = "radio" name = "gender">female
-                <input type = "month"><br>
-                <input type = "file"><br>
-                <input type = "submit" value = "Submit">
+          <!-- counter -->
+          <div class="counter">
+            <span class="line"></span>
+            <span>01 / 08</span>
+          </div>
 
-            </form>
-            <P><abbr title = "HyperText Markup Language">HTML</abbr> is the standard markup language for documents designed to be displayed in a web browser.
-            <mark>Marked</mark> text is highlighted for reference or notation purposes, due to the marked passage's relevance in another context.
-            <br>
-            The price dropped from <del>₹500</del> to <ins>₹350</ins>.
-            <br>
-            The error code was <code>404 Not Found</code>.
-            <br>
-            Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save.
-            <br>
-            The output was <samp>Hello, World!</samp>.
-            <br>
-            The variable is defined as <var>x</var>.
-            <br>
-            <q>To be or not to be</q> is a famous quote.
-            <br>
-            <cite>Hamlet</cite> was written by Shakespeare.
-            <br>
-            A word break opportunity: super<wbr>cali<wbr>fragilistic
-            <br>
-            <time datetime="2025-01-15">January 15, 2025</time>
-            <br>
-            <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-  External Site
-</a>
-<img
-  src="photo-800.jpg"
-  srcset="photo-400.jpg 400w, photo-800.jpg 800w, photo-1200.jpg 1200w"
-  sizes="(max-width: 600px) 400px, (max-width: 1000px) 800px, 1200px"
-  alt="Description"
-  width="800"
-  height="600"
-  loading="lazy"
->
- </P>
- <table>
-  <caption>Monthly Sales Report — Q3 2025</caption>
+        </div>
 
-  <thead>
-    <tr>
-      <th scope="col">Month</th>
-      <th scope="col">Revenue</th>
-      <th scope="col">Orders</th>
-      <th scope="col">Growth</th>
-    </tr>
-  </thead>
+        <!-- pokeball -->
+        <div class="pokeball"></div>
 
-  <tbody>
-    <tr>
-      <th scope="row">July</th>
-      <td>₹1,20,000</td>
-      <td>340</td>
-      <td>+12%</td>
-    </tr>
-    <tr>
-      <th scope="row">August</th>
-      <td>₹1,45,000</td>
-      <td>390</td>
-      <td>+20%</td>
-    </tr>
-  </tbody>
+      </div>
 
-  <tfoot>
-    <tr>
-      <th scope="row">Total</th>
-      <td>₹2,65,000</td>
-      <td>730</td>
-      <td></td>
-    </tr>
-  </tfoot>
-</table>
-                
+      <!-- RIGHT SIDE -->
+      <div class="right">
 
+        <!-- menu -->
+        <div class="menu">☰</div>
 
+        <!-- pikachu image -->
+        <img src="./pikachu.png" class="pikachu">
 
+        <!-- dots -->
+        <div class="dots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
+      </div>
 
+    </div>
 
+  </div>
 
-
-        
-
-     
 </body>
 </html>
