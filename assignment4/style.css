@@ -5,25 +5,24 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:20px;
+html,body{
+    width:100%;
+    height:100%;
+    background:#f2f2f2;
 }
 
 main{
     width:100%;
-    min-height:100vh;
+    height:100vh;
+    background-color: rgb(24, 24, 24);
 
     display:grid;
 
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1.1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 
-    grid-template-rows:30% 20% 25% 25%;
-
-    gap:15px;
+    gap:14px;
+    padding:14px;
 
     grid-template-areas:
     "top-left top-center1 top-center2 top-right"
@@ -32,13 +31,26 @@ main{
     "bottom-left bottom-left bottom-center bottom-right";
 }
 
+/* ---------------- COMMON ---------------- */
+
+.top-left,
+.top-center1,
+.top-center2,
+.top-right,
+.left-center,
+.center,
+.bottom-left,
+.bottom-center,
+.bottom-right{
+    border-radius:28px;
+    overflow:hidden;
+}
+
+
 .top-left{
     grid-area:top-left;
     position:relative;
-    border-radius:2px;
-    overflow:hidden;
     background:#111;
-    height:100%;
 }
 
 .top-left1{
@@ -54,9 +66,10 @@ main{
 
 .top-left2{
     position:absolute;
-    bottom:18px;
-    left:18px;
-    right:18px;
+    left:16px;
+    right:16px;
+    bottom:16px;
+
     display:flex;
     gap:10px;
 }
@@ -64,114 +77,153 @@ main{
 .tracker1,
 .tracker2,
 .tracker3{
+    flex:1;
+
     background:rgba(0,0,0,0.75);
+
     backdrop-filter:blur(10px);
-    border-radius:18px;
-    padding:12px 14px;
+
+    border-radius:16px;
+
+    padding:10px;
+
     display:flex;
-    align-items:space-around;
-    gap:5px;
+    align-items:center;
+    gap:8px;
+
     color:#fff;
-    flex:2;
 }
 
 .tracker1 div,
 .tracker2 div,
 .tracker3 div{
-    width:42px;
-    height:42px;
-    background:#ffd400;
+    width:38px;
+    height:38px;
+
     border-radius:50%;
+
+    background:#ffe000;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     color:#000;
-    font-size:20px;
+    font-size:17px;
+
+    flex-shrink:0;
 }
 
 .tracker1 p,
 .tracker2 p,
 .tracker3 p{
-    font-size:12px;
-    line-height:16px;
+    font-size:10px;
+    line-height:1.2;
 }
+
+.tracker1 strong,
+.tracker2 strong,
+.tracker3 strong{
+    font-size:18px;
+}
+
 
 .top-center1{
     grid-area:top-center1;
     background:#ffe000;
-    border-radius:28px;
-    padding:30px;
+
+    padding:28px;
+
     position:relative;
-    overflow:hidden;
+}
+
+.wifi i{
+    font-size:1.5rem;
+    top: 2px;
 }
 
 .text1{
-    margin-top:20px;
+    margin-top:18px;
 }
 
 .text1 h4{
-    font-size:2rem;
-    line-height:1.2;
-    font-weight:900;
+    font-size:1rem;
+    line-height:1.08;
+    font-weight:700;
+    width:90%;
 }
 
 .icons{
-    position:absolute;
-    bottom:20px;
-    left:30px;
+    left:28px;
+    bottom: 10px;
+    display:flex;
+    gap:18px;
+    margin-bottom:20px;
+    margin-left: -10px;
 }
 
 .icons img{
-    width:250px;
+    width:230px;
+
 }
+
+/* ================= TOP CENTER 2 ================= */
 
 .top-center2{
     grid-area:top-center2;
+
     background:#f5f5f5;
-    border-radius:28px;
-    padding:30px;
+
+    padding:28px;
+
     position:relative;
 }
 
 .text2 p{
-    font-size:14px;
+    font-size:10px;
 }
 
 .text3{
-    margin-top:20px;
+    margin-top:18px;
 }
 
 .text3 h4{
-    font-size:3rem;
+    font-size:1.5rem;
+    line-height:1.05;
     font-weight:900;
-    margin-bottom:30px;
+
+    margin-bottom:40px;
 }
 
 .text3 p{
-    font-size:18px;
-    margin-bottom:20px;
+    font-size:10px;
+    margin-top: -25px;
 }
 
 .text3 h5{
-    font-size:2.8rem;
+    font-size:1.5em;
     font-weight:300;
 }
 
 .bar{
     position:absolute;
-    bottom:20px;
-    left:30px;
+    left:28px;
+    bottom:18px;
 }
 
 .bar img{
     width:85%;
 }
 
+/* ================= TOP RIGHT ================= */
+
 .top-right{
     grid-area:top-right;
+
     background:#f5f5f5;
-    border-radius:28px;
+
     padding:28px;
+
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -180,13 +232,13 @@ main{
 .logo3{
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:7px;
 }
 
 .black,
 .yellow{
-    width:20px;
-    height:20px;
+    width:18px;
+    height:18px;
 }
 
 .black{
@@ -198,63 +250,76 @@ main{
 }
 
 .logo3 p{
-    font-size:16px;
-    font-weight:600;
+    font-size:14px;
+    font-weight:700;
 }
 
 .text4 h1{
-    font-size:4rem;
-    line-height:1.1;
-    font-weight:900;
+    font-size:2rem;
+    line-height:1.05;
+    font-weight:700px;
+    letter-spacing:-2px;
 }
 
 .top-right-bottom{
     background:#f7c9c4;
-    border-radius:24px;
-    padding:24px;
+
+    border-radius:22px;
+
+    padding:22px;
 }
 
 .location{
     display:flex;
     align-items:center;
-    gap:18px;
-    margin-bottom:40px;
+    gap:16px;
+
+    margin-bottom:35px;
 }
 
 .loction-icon{
-    width:60px;
-    height:60px;
-    background:#000;
-    color:#ffe000;
+    width:56px;
+    height:56px;
+
     border-radius:50%;
+
+    background:#000;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:24px;
+
+    color:#ffe000;
+    font-size:22px;
 }
 
 .text5 p{
-    font-size:1.5rem;
+    font-size:1.1rem;
+    line-height:1.2;
 }
 
 .top-right-bottom h3{
-    font-size:1.5rem;
-    font-weight:700;
+    font-size:1.8rem;
+    font-weight:800;
 }
+
+/* ================= LEFT CENTER ================= */
 
 .left-center{
     grid-area:left-center;
+
     background:#f5f5f5;
-    border-radius:28px;
-    padding:28px;
+
+    padding: 25px;  
+
     display:flex;
     flex-direction:column;
     justify-content:space-between;
 }
 
 .text6 h2{
-    font-size:2rem;
-    line-height:1.2;
+    font-size:20px;
+    line-height:1.4;
     font-weight:900;
 }
 
@@ -265,114 +330,125 @@ main{
 }
 
 .logo4 img{
-    width:65px;
+    width:58px;
+    margin: -10px;
 }
 
 .text7 h1{
-    font-size:14px;
-    line-height:1.5;
+    font-size:15px;
+    line-height:1.4;
 }
+
+/* ================= CENTER ================= */
 
 .center{
     grid-area:center;
+
     background:#f5f3e8;
-    border-radius:28px;
+
     display:flex;
     align-items:center;
-    justify-content:center;
-    overflow:hidden;
+    justify-content:left;
 }
 
 .center1{
     display:flex;
     align-items:center;
-    gap:25px;
+    gap: -10px;
 }
 
 .center2 img{
-    width:120px;
+    width:300px;
 }
 
 .center3 h1{
-    font-size:7vw;
+    font-size:7rem;
     font-weight:900;
+    margin-bottom:18px;
+    letter-spacing:-4px;
 }
+
+/* ================= BOTTOM LEFT ================= */
 
 .bottom-left{
     grid-area:bottom-left;
+
     background:#f7cfc9;
-    border-radius:28px;
-    overflow:hidden;
+
     display:flex;
-    width:100%;
-    height:100%;
 }
 
 .left-section{
     width:42%;
     position:relative;
-    overflow:hidden;
 }
 
 .girl-img{
     width:100%;
     height:100%;
+    border-radius:28px;
+    padding:18px;
     object-fit:cover;
 }
 
 .visit-btn{
     position:absolute;
-    left:20px;
-    bottom:20px;
+
+    left:18px;
+    bottom:18px;
+
     background:rgba(0,0,0,0.65);
+
     backdrop-filter:blur(5px);
-    color:white;
-    padding:16px 24px;
-    border-radius:22px;
+
+    color:#fff;
+
+    padding:15px 22px;
+
+    border-radius:20px;
+
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
 }
 
 .arrow{
-    font-size:28px;
+    font-size:26px;
 }
 
 .visit-btn span:last-child{
-    font-size:20px;
-    font-weight:500;
+    font-size:19px;
 }
 
 .right-section{
     width:58%;
-    padding:28px;
+
+    padding:26px;
+
     display:flex;
     flex-direction:column;
     justify-content:space-between;
 }
 
 .right-section h3{
-    font-size:2rem;
-    line-height:1.05;
+    font-size:1rem;
+    line-height:1;
     font-weight:900;
-    color:black;
 }
 
 .bottom-content{
     display:flex;
     justify-content:space-between;
-    align-items:end;
+    align-items:flex-end;
 }
 
 .bottom-content h1{
-    font-size:5rem;
-    font-weight:900;
+    font-size:3rem;
     line-height:1;
 }
 
 .bottom-content p{
-    font-size:18px;
-    margin-top:5px;
+    font-size:16px;
 }
 
 .trainers{
@@ -381,11 +457,15 @@ main{
 }
 
 .trainers img{
-    width:58px;
-    height:58px;
+    width:56px;
+    height:56px;
+
     border-radius:50%;
+
     object-fit:cover;
+
     border:4px solid #f7cfc9;
+
     margin-left:-12px;
 }
 
@@ -393,32 +473,39 @@ main{
     margin-left:0;
 }
 
+/* ================= BOTTOM CENTER ================= */
+
 .bottom-center{
     grid-area:bottom-center;
+
     background:#ffe000;
-    border-radius:28px;
-    overflow:hidden;
+
     position:relative;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
 }
 
 .bottom-center img{
-    width:120%;
-    height:115%;
-    object-fit:contain;
     position:absolute;
-    bottom:-10px;
+    bottom:-8px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:110%;
+    height:110%;
+
+    object-fit:contain;
 }
+
+/* ================= BOTTOM RIGHT ================= */
 
 .bottom-right{
     grid-area:bottom-right;
+
     background:#f7c9c4;
-    border-radius:28px;
-    padding:20px;
+
+    padding:18px;
+
     position:relative;
-    overflow:hidden;
+
     display:flex;
     flex-direction:column;
 }
@@ -427,7 +514,8 @@ main{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:15px;
+
+    margin-bottom:14px;
 }
 
 .mobile-logo{
@@ -437,23 +525,24 @@ main{
 }
 
 .mobile-logo img{
-    width:42px;
+    width:36px;
 }
 
 .mobile-logo p{
-    font-size:22px;
+    font-size:1.6rem;
     font-weight:600;
 }
 
 .mobile-top span{
-    font-size:22px;
+    font-size:1.6rem;
 }
 
 .mobile-image{
     flex:1;
-    border-radius:30px;
+
+    border-radius:28px;
+
     overflow:hidden;
-    margin-top:10px;
 }
 
 .mobile-image img{
@@ -464,23 +553,30 @@ main{
 
 .mobile-overlay{
     position:absolute;
-    left:30px;
-    bottom:35px;
+
+    left:28px;
+    bottom:32px;
+
     color:#fff;
 }
 
 .mobile-overlay h1{
-    font-size:2.3rem;
-    line-height:1.1;
-    font-weight:800;
-    margin-bottom:20px;
+    font-size:2.1rem;
+    line-height:1;
+    font-weight:900;
+
+    margin-bottom:18px;
 }
 
 .mobile-overlay button{
-    padding:16px 38px;
     border:none;
-    border-radius:40px;
+
     background:#ffe000;
-    font-size:1.2rem;
+
+    padding:14px 34px;
+
+    border-radius:40px;
+
+    font-size:1rem;
     font-weight:800;
 }
