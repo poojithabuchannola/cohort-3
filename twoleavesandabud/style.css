@@ -1,0 +1,698 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --blue: #2a2857;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: "Bitter", serif;
+  font-family: "Roboto", sans-serif;
+  */
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+.top-text {
+  height: 1.8rem;
+  width: 100%;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-text h3 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  word-spacing: 0.4rem;
+  color: #fff;
+  font-family: "roboto";
+  text-transform: uppercase;
+}
+
+header {
+  width: 97%;
+  min-height: 10vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid black;
+  top: 1rem;
+  left: calc(1.5%);
+  z-index: 999;
+  position: relative;
+}
+.active {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  margin-left: 0;
+  transition: transform 0.4s ease;
+}
+.icon {
+  display: none;
+}
+.icon i {
+  color: #474747;
+}
+
+i img {
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.part1 {
+  font-size: 1rem;
+  font-family: "Bitter", serif;
+  font-size: 1.3rem;
+  align-items: center;
+}
+.part1 ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+}
+.part1 ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.part1 ul li i {
+  font-size: 0.6rem;
+  color: #000;
+}
+.part1 ul li a,
+.part3 a {
+  position: relative;
+}
+.part1 ul li a::after,
+.part3 a::after {
+  content: "";
+  height: 1px;
+  width: 0%;
+  background: #000;
+  margin: -4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all ease 0.3s;
+}
+.part1 ul li a:hover:after,
+.part3 a:hover:after {
+  width: 100%;
+}
+.part1 ul li span {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: rgb(188, 236, 255);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.4rem;
+}
+.part1 ul li span.stare {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  height: 25px;
+  width: 25px;
+  background-color: #ffb701;
+}
+.part1 ul li span.stare i {
+  font-size: 0.5rem;
+}
+.part2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.part3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  word-spacing: 0.5rem;
+}
+.part3 i {
+  font-size: 2rem;
+  margin-left: -1.2rem;
+  color: #474747;
+}
+#section1 {
+  height: 90vh;
+  width: 100%;
+  background-image: url(./assets/hero_img.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero_heading {
+  width: 31%;
+  position: absolute;
+  bottom: 2rem;
+}
+.hero_heading h1 {
+  text-align: start;
+  font-family: "Bitter", serif;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -3px;
+  margin: 1rem 2rem;
+  font-stretch: expanded;
+}
+.hero_heading p {
+  color: #201c1a;
+  margin: 1rem 2rem;
+  font-family: "roboto";
+  font-size: 1rem;
+}
+.hero_heading button {
+  padding: 1rem 4rem;
+  background-color: #2a2857;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  margin: 0 0 1rem 2rem;
+  border: 1px solid #000;
+}
+.hero_heading button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+main .hero_heading2 {
+  margin: 7rem auto;
+  width: 60%;
+}
+main h1 {
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 3.5vw, 4rem);
+}
+#section2 {
+  padding: 2rem 0 7rem 2rem;
+  max-width: 100%;
+  /* background-color: #ffacac; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 2px solid #000;
+}
+.text_rotate {
+  text-transform: uppercase;
+  font-family: "roboto";
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 900;
+  width: fit-content;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  transform: rotate(-3deg);
+  padding: 0 0.5rem;
+}
+.best_sellers {
+  background-color: #daaeea;
+}
+.card_container {
+  margin: 5rem 0;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 2rem;
+}
+
+.card_container .card {
+  width: 326px;
+  flex-shrink: 0;
+  /* overflow: hidden; */
+  /* background-color: #79ff98; */
+  font-family: "roboto";
+  font-weight: 300;
+}
+.card .item {
+  width: 100%;
+  height: 350px;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: #9cffe5;
+  position: relative;
+}
+.item .heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item .heading h2 {
+  background-color: #ffffff;
+  border: 1px solid #000;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.item .heading p {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.item .heading p i {
+  font-size: 0.6rem;
+  margin: 0 0.3rem;
+}
+.item img {
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.4s;
+}
+.item img:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.item .add {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding-top: 0.3rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+}
+.item .add:hover {
+  background-color: #2a2857;
+  color: #fff;
+  cursor: pointer;
+}
+.card .title {
+  margin: 1rem 0;
+  font-family: "Bitter", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.card .price {
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.card .para {
+  color: #363636;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.Explore {
+  margin-left: -2rem;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  border: none;
+  border: 1px solid #000;
+  background-color: #2a2857;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+#section2 .Explore:hover {
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+}
+#section3 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 7rem 0 0 15%;
+  margin-bottom: 15%;
+}
+.discover {
+  background-color: #ff7f31;
+}
+
+#section3 h1 {
+  margin: 2rem 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 100;
+}
+#section3 input.Search {
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  border: 1px solid #000;
+  margin: 2rem 0 4rem 0;
+  font-weight: 200;
+}
+#section3 input:focus {
+  outline: none;
+  border: 1px solid #000;
+  width: 80%;
+}
+#section3 p {
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.buttons_container {
+  width: 80%;
+}
+.buttons_container button {
+  width: fit-content;
+  margin: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  border: 1px solid #000;
+  font-size: 1.8rem;
+  font-family: " Bitter", serif;
+  font-weight: 200;
+  background-color: #daeaff;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+.buttons_container button:hover {
+  background-color: rgb(142, 205, 230);
+  cursor: pointer;
+}
+#section4 {
+  padding: 2rem;
+  width: 100%;
+  min-height: 200vh;
+  background-image: url(./assets/Section_img.webp);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+#section4 .ketali {
+  align-self: flex-end;
+  margin-right: 7%;
+  height: 10rem;
+  width: 10rem;
+}
+.ketali img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.our_origins {
+  background-color: rgb(193, 237, 255);
+}
+#section4 h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "roboto";
+  font-weight: 900;
+  font-size: clamp(3rem, 10vw, 10rem);
+}
+#section4 p {
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+.section4_icon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vmin;
+}
+.section4_icon .icon_box {
+  width: 150px;
+  text-align: center;
+}
+.icon_box .icon_img {
+  height: 15vmin;
+  margin: 1rem 0;
+}
+.icon_img img {
+  height: 100%;
+  width: 100%;
+}
+.icon_box h3 {
+  font-family: "roboto";
+  font-weight: 600;
+  font-size: clamp(0.7rem, 1.1vw, 1.1rem);
+  color: #fff;
+  text-transform: uppercase;
+}
+.our_story {
+  background-color: #fff;
+  color: #000;
+}
+.our_story:hover {
+  background-color: #2a2857;
+  color: #fff;
+  cursor: pointer;
+}
+.move {
+  transition: transform 0.1s linear;
+}
+#section5 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 7rem 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#section5 h1 {
+  margin: 2rem 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 100;
+  margin-left: 10rem;
+}
+.reviews {
+  background-color: #73bc25;
+  margin-left: 10rem;
+}
+#section5 .card_container2 {
+  margin: 5rem 0rem;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+.shop_card {
+  padding: 1rem;
+  width: 280px;
+  min-width: 282px;
+  height: 450px;
+  border-radius: 1rem;
+  border: 1px solid #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.shop_card h2 {
+  font-family: "Bitter", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.shop_card p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-family: "roboto";
+  font-weight: 300;
+}
+.shop_card .item_box {
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item_box img {
+  width: 85%;
+  background-size: cover;
+}
+.bottom_box {
+  width: 90%;
+  overflow: hidden;
+  border-radius: 0.7rem;
+  border: 1px solid #000;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 1rem;
+}
+.bottom_box h4 {
+  width: 30%;
+  margin: 0 0.7rem;
+  text-align: start;
+  color: #000;
+  font-size: 0.8rem;
+  font-family: "bitter";
+  text-transform: uppercase;
+  font-weight: 500;
+}
+button.shop {
+  font-size: 1rem;
+  padding: 0.9rem;
+  border-radius: 2rem;
+  border: none;
+  border: 1px solid #000;
+  transition: all ease 0.4s;
+}
+button.shop:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+#section6 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ff8686;
+  display: flex;
+}
+#section6 .left {
+  width: 50%;
+}
+.left img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+#section6 .right {
+  width: 50%;
+
+  background-color: #2a2857;
+}
+.right h1 {
+  margin: 10rem 0 0 4rem;
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+  font-weight: 100;
+  color: #ffff;
+}
+.right button.learn_more {
+  margin: 4rem;
+  background-color: #fff;
+  color: #000;
+}
+button.learn_more:hover {
+  background-color: transparent;
+  color: #fff;
+}
+@media (max-width: 1050px) {
+  .part1,
+  .part3 {
+    display: none;
+  }
+  .icon {
+    display: block;
+    font-size: 2rem;
+  }
+  #section1 {
+    background-image: url(./assets/hero_img.png);
+  }
+  .hero_heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .hero_heading button {
+    width: 90%;
+    margin-left: 0;
+  }
+  main .hero_heading2 {
+    margin: 3rem auto;
+  }
+
+  .card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  #section3 {
+    padding: 5rem 2rem;
+  }
+  #section5 {
+    padding: 1.5rem;
+  }
+  #section5 h1,
+  .reviews {
+    margin: 1rem 0;
+  }
+  .card_container2 {
+  }
+  #section6 {
+    flex-direction: column;
+  }
+  #section6 .left {
+    height: 50%;
+    width: 100%;
+    background: #000;
+  }
+  #section6 .right {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .right h1 {
+    margin: 2rem 0;
+    width: 60%;
+  }
+  .right button.learn_more {
+    margin: 0;
+  }
+}
